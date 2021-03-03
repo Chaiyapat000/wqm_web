@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap');
+
+body {
+    background: #ffffff !important;
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  h2{
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+  }
+
+  h3,label,span {
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  body, html, .App, #root {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  div.card-header{
+    font-size: 18pt;
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+    background-color: #4f72b4;
+    color: #ffffff ;
+  }
+
+  div.card{
+    border-color: #4f72b4;
+  }
+
+  .card-body{
+    font-size: 12pt;
+    font-weight: 300;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  div.card-footer{
+    background-color: #ffffff;
+  }
+
+  button.btn{
+    background-color: #4f72b4;
+  }
+
+  button.darker, button.darker:focus{
+    background-color: #4062a1;
+  }
+
+  button.del{
+    background-color: #B54242;
+  }
+
+
+  button.add{
+    background-color: #E4E4E4;
+    border: none;
+  }
+
+  button.add:hover,button.add:active{
+    background-color: #E4E4E4;
+    border: none;
+  }
+
+  span.badge.head{
+    background-color: #fff4a2;
+    color: rgb(44, 44, 44);
+    font-weight: 500;
+    font-family: 'Kanit', sans-serif;
+  }
+
+ div.modal-header, div.modal-body{
+  font-weight: 500;
+  font-family: 'Kanit', sans-serif;
+ }
+
+button.cancel{
+  background-color: #F4B03B;
+}
+
+
+.input-group#check{
+  /* background-color: #F4B03B; */
+  width: 400px;
+}
+
+.input-range {
+  margin-top: 20px;
+}

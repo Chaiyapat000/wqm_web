@@ -1,0 +1,55 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@primer/octicons-react": "^10.0.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/googlemaps": "^3.0.0",
+    "@types/markerclustererplus": "^2.1.29",
+    "@types/react": "^15.0.0 || ^16.0.0",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.5.0",
+    "bootstrap-icons": "^1.0.0-alpha5",
+    "moment": "^2.27.0",
+    "react": "16.8.0",
+    "react-charts": "^2.0.2-next.6",
+    "react-confirm-alert": "^2.6.1",
+    "react-day-picker": "^7.4.8",
+    "react-dom": "^16.13.1",
+    "react-geocode": "^0.2.1",
+    "react-google-maps": "^9.4.5",
+    "react-icons": "^3.10.0",
+    "react-input-range": "^1.3.0",
+    "react-rangeslider": "^2.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "react-widgets": "^4.5.0",
+    "react-widgets-moment": "^4.0.28",
+    "reactstrap": "^8.5.1",
+    "styled-components": "^5.1.1"
+  },
+  "scripts": {
+    "start": "PORT=3030 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

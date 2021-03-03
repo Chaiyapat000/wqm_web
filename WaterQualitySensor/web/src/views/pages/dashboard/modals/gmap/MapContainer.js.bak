@@ -1,0 +1,87 @@
+import React from "react";
+import { withGoogleMap, GoogleMap, withScriptjs, Marker } from 'react-google-maps'
+
+const mapStyles = {
+  width: "90%",
+  height: "150px"
+};
+
+const containerStyles = {
+  width: "100%",
+  height: "150px",
+  display: "flex",
+  margin: "0.5em"
+};
+
+export default class MapContainer extends React.Component {
+  constructor() {
+    super()
+
+    this.state = {
+      center: {
+        lat: 15,
+        long: 100
+      }
+    }
+
+    this.mapRef = React.createRef((ref) => {
+      this.mapRef = ref;
+    });
+
+  }
+
+
+  handleBoundsChanged = () => {
+    const mapCenter = this.mapRef.current.getCenter(); //get map center
+    this.props.setLocation(mapCenter)
+  };
+
+
+  componentDidMount() {
+    this.setState({center: {
+      lat: parseFloat(this.props.location.lat),
+      long: parseFloat(this.props.location.long)
+    }})
+  }
+
+
+  shouldComponentUpdate(nextProps) {
+    /*
+    this.setState({center: {
+      lat: nextProps.station.location.lat,
+      long: nextProps.station.location.long
+    }})
+    */
+
+    //console.log(nextProps.station.location.lat + "," + this.state.center.lat);
+    // If shouldComponentUpdate returns false,
+    // then render() will be completely skipped until the next state change.
+    // In addition, componentWillUpdate and componentDidUpdate will not be called.
+    //return (parseFloat(nextProps.station.location.lat) !== this.state.center.lat);
+    return true
+
+  }
+
+  render() {
+
+    const Map = withScriptjs(withGoogleMap(props =>
+      <GoogleMap
+        ref = { this.mapRef }
+        defaultCenter = { { lat: this.state.center.lat, lng: this.state.center.long } }
+        defaultZoom = { 13 }
+        onDragEnd ={ this.handleBoundsChanged }
+      >
+      <Marker position={ { lat: parseFloat(this.props.location.lat), lng: parseFloat(this.props.location.long) } } />
+      </GoogleMap>
+    ));
+
+    return (
+      <Map
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtwb1QvdNe5qCx93xkLFXw7n7Spgtz3Fw"
+        loadingElement={<div style={{ height: `100%` }} />}
+        containerElement={<div style={{ height: `400px` }} />}
+        mapElement={<div style={{ height: `100%` }} />}
+      />
+    );
+  }
+}
